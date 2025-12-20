@@ -57,7 +57,7 @@ private:
     std::unordered_map<std::string, std::string> memTable;
     std::condition_variable cv;
     std::thread writer;
-    const size_t threshold = 1024;
+    const size_t threshold = 1024 * 1024;
     const std::string directory = "./data";
     void writeToDisk(std::unordered_map<std::string, std::string> snapshot)
     {
