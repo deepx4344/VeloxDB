@@ -44,17 +44,31 @@ make
 g++ -std=c++20 src/main.cpp -o veloxdb
 
 Usage
-Run the executable to enter the interactive shell:
+Run the executable to enter the interactive shell.
 
-./veloxdb
+If you built with **Make**:
+```bash
+./src/main.exe
+```
 
-Commands 
+If you built manually with **G++**:
+```bash
+./veloxdb.exe
+```
 
-Command	Description	Example
-put [key] [val]	Insert or update a key-value pair	put user_1 alice
-get [key]	Retrieve a value by its key	get user_1
-length	Count items currently in memory	length
-q or e	Graceful shutdown (flushes memory to disk)
+### Interactive Shell Commands
+
+Once inside the shell (`db prompt >>>`), you can use the following commands:
+
+| Command | Description | Example |
+| :--- | :--- | :--- |
+| `put <key> <value>` | Insert or update a key-value pair. **Note:** Keys and values cannot contain spaces. | `put user_1 alice` |
+| `get <key>` | Retrieve a value by its key. | `get user_1` |
+| `length` | Show the number of items currently in the active memory table. | `length` |
+| `q` or `e` | **Quit/Exit**. Flushes the current memory table to disk and safely shuts down the database. | `q` |
+
+> [!IMPORTANT]
+> Always exit using `q` or `e` to ensure your latest data is saved to disk. Force closing the terminal may result in data loss.
 
 ⚠️ Important Notes
 

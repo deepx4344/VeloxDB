@@ -50,7 +50,7 @@ int current(const std::string &directory)
     return count;
 }
 
-class MemDB
+class MemDB  
 {
 private:
     mutable std::shared_mutex mutex_;
