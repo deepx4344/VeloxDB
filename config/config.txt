@@ -1,0 +1,5 @@
+#config file for veloxDB
+DB_NAME=VELOXDB
+NEXT_FILE_ID=0;
+DATA_DIRECTORY = "./data;
+WRITE_THRESHOLD=1048576
