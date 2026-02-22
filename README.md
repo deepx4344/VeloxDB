@@ -78,6 +78,8 @@ Search Complexity: Disk lookups are currently (O(N)) based on the number of file
 
 Exit Protocol: Always use the q command to exit. This ensures the current active MemTable is flushed to disk before the process terminates.
 
+Status: This is an abandoned project, no code update or bug fixed would be made.
+
 📜 License
 
 Distributed under the MIT License. See LICENSE for more information.
